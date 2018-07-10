@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin\User_Model;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Admin_VW.admin');
+        $users = User_Model::paginate(10);
+        return view('Admin_VW.admin',compact('users'));
     }
 }
