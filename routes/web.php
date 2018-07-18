@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth:web'],function(){
     Route::resource('User', 'Admin\User_CT');
+    Route::resource('Profile', 'Admin\User_Profile_CT');
+    Route::resource('Advertisement', 'Admin\User_Add_CT');
 
 });
 

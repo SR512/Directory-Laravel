@@ -58,7 +58,7 @@
         <div class="navbar-header">
             <div class="top-left-part">
                 <!-- Logo -->
-                <a class="logo" href="index.html">
+                <a class="logo" href="{{action('Admin\User_CT@index')}}">
                     {{ config('app.name', 'Laravel') }} Admin Panel
                    </a>
             </div>
@@ -105,10 +105,14 @@
             </div>
             <ul class="nav" id="side-menu">
                 <li style="padding: 70px 0 0;">
-                    <a href="#" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    <a href="{{action('Admin\User_CT@index')}}" class="waves-effect"><i class="fa fa-home fa-fw" aria-hidden="true"></i>DashBoard</a>
                 </li>
-
-
+                <li>
+                    <a href="{{action('Admin\User_Profile_CT@create')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="{{action('Admin\User_Add_CT@index')}}" class="waves-effect"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Advertisement</a>
+                </li>
             </ul>
         </div>
     </div>

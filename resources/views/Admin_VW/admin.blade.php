@@ -11,7 +11,7 @@
             <div class="panel-heading">New User</div>
             <div class="panel-body">
 
-                {!! Form::open(['route' => 'User.store', 'method' => 'POST','class' => 'form-horizontal','form-material','files'=>'true']) !!}
+                {!! Form::open(['route' => 'User.store', 'method' => 'POST','class' => 'form-material','files'=>'true']) !!}
                 {{ csrf_field() }}
 
                 <div class="form-group">
@@ -96,11 +96,11 @@
                         @endif
                     </div>
 
-                    <div class="col-md-4 {{ $errors->has('State') ? ' has-error' : '' }}">
-                        <input type="text" class="form-control" name="State" placeholder="State">
-                        @if ($errors->has('State'))
+                    <div class="col-md-4 {{ $errors->has('Pincode') ? ' has-error' : '' }}">
+                        <input type="text" class="form-control" name="Pincode" placeholder="Pincode">
+                        @if ($errors->has('Pincode'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('State') }}</strong>
+                                        <strong>{{ $errors->first('Pincode') }}</strong>
                                     </span>
                         @endif
                     </div>
@@ -122,10 +122,10 @@
                 <thead>
                 <tr>
                     <th>Register</th>
-                    <th>First_Name</th>
-                    <th>Middel_Name</th>
-                    <th>Last_Name</th>
-                    <th>Mobile-Number</th>
+                    <th>First Name</th>
+                    <th>Middel Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile Number</th>
                     <th>Occupation</th>
                     <th>Address</th>
                     <th>Status</th>
@@ -141,7 +141,7 @@
                         <td>{{$user['Last_Name']}}</td>
                         <td>{{$user['Mobile_Number']}}</td>
                         <td>{{$user['Occupation']}}</td>
-                        <td><textarea disabled>{{$user['Area']}} {{$user['City']}} {{$user['State']}}</textarea></td>
+                        <td><textarea disabled>{{$user['Area']}} {{$user['City']}} {{$user['Pincode']}}</textarea></td>
                         @if($user['Status'] == 1)
                             <td><label class="btn btn-success">Active</label></td>
                         @else
@@ -158,7 +158,7 @@
                                     data-occupation="{{$user['Occupation']}}"
                                     data-area="{{$user['Area']}}"
                                     data-city="{{$user['City']}}"
-                                    data-state="{{$user['State']}}"
+                                    data-pincode="{{$user['Pincode']}}"
                                     data-status="{{$user['Status']}}"
                             >
                                 <span class='glyphicon glyphicon-pencil'></span>
@@ -256,7 +256,7 @@
                         </div>
 
                         <div class="col-md-4 ">
-                            <input type="text" class="form-control" id="eState" name="eState" placeholder="State">
+                            <input type="text" class="form-control" id="ePincode" name="ePincode" placeholder="ePincode">
                         </div>
 
 
