@@ -113,6 +113,12 @@
                 <li>
                     <a href="{{action('Admin\User_Add_CT@index')}}" class="waves-effect"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Advertisement</a>
                 </li>
+                <li>
+                    <a href="{{action('Admin\User_Event_CT@index')}}" class="waves-effect"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Events</a>
+                </li>
+                <li>
+                    <a href="{{action('Admin\User_Article_CT@index')}}" class="waves-effect"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Articles</a>
+                </li>
             </ul>
         </div>
     </div>
