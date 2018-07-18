@@ -25,25 +25,22 @@
                     <tbody>
                     @foreach($profiles as $profile)
                         <tr class="item{{$profile['id']}}">
-                            <td>{{$profile['Profile']}}</td>
+                            <td><img src="{{URL::to('public/').'/profile/'.$profile['Profile']}}" width="200px"/></td>
                             <td>{{$profile['User_Name']}}</td>
-                            <td>{{$profile['Status']}}</td>
-                            </td>
                             @if($profile['Status'] == 1)
                                 <td><label class="btn btn-success">Active</label></td>
                             @else
                                 <td><label class="btn btn-danger">Block</label></td>
                             @endif
-
+                         <td>
                             @if($profile['Status'] == 1)
-                                    <a class="btn btn-danger btn-sm" href="{{ route('Profile.edit', $profile['id']) }}"
-                                    >Block
+                                    <a href="{{ route('Profile.edit', $profile['id']) }}" class="btn btn-danger btn-sm">Block
                                     </a>
                                 @else
                                     <a href="{{ route('Profile.edit', $profile['id']) }}" class="btn btn-success btn-sm">Active
                                     </a>
                                 @endif
-                            </td>
+                         </td>
                         </tr>
                     @endforeach
                     </tbody>
