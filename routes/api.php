@@ -27,5 +27,6 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('Advertisement', 'API\UserController@getAdd');
     Route::get('EVENT', 'API\UserController@getEvent');
     Route::get('Article', 'API\UserController@getArticle');
+    Route::get('UserList', 'API\UserController@getUser');
 
 });
