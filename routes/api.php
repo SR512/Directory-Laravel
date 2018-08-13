@@ -28,5 +28,8 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('EVENT', 'API\UserController@getEvent');
     Route::get('Article', 'API\UserController@getArticle');
     Route::get('UserList', 'API\UserController@getUser');
+    Route::get('SendOTP', 'API\UserController@sendOtp');
+    Route::post('sendPassword', 'API\UserController@sendPassword');
+
 
 });
