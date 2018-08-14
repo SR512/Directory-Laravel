@@ -122,6 +122,7 @@
                 <thead>
                 <tr>
                     <th>Register</th>
+                    <th>Profile</th>
                     <th>First Name</th>
                     <th>Middel Name</th>
                     <th>Last Name</th>
@@ -136,6 +137,7 @@
                 @foreach($users as $user)
                     <tr class="item{{$user['id']}}">
                         <td>{{$user['Register_Number']}}</td>
+                        <td><img src="{{URL::to('public/').'/profile/'.$user['profile']}}" width="100px"/></td>
                         <td>{{$user['First_Name']}}</td>
                         <td>{{$user['Middel_Name']}}</td>
                         <td>{{$user['Last_Name']}}</td>

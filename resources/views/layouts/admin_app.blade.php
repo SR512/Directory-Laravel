@@ -108,9 +108,6 @@
                     <a href="{{action('Admin\User_CT@index')}}" class="waves-effect"><i class="fa fa-home fa-fw" aria-hidden="true"></i>DashBoard</a>
                 </li>
                 <li>
-                    <a href="{{action('Admin\User_Profile_CT@create')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
-                </li>
-                <li>
                     <a href="{{action('Admin\User_Add_CT@index')}}" class="waves-effect"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Advertisement</a>
                 </li>
                 <li>
