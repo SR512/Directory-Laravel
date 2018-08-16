@@ -25,5 +25,6 @@ Route::group(['middleware' => 'auth:web'],function(){
     Route::resource('Advertisement', 'Admin\User_Add_CT');
     Route::resource('Event', 'Admin\User_Event_CT');
     Route::resource('Article', 'Admin\User_Article_CT');
+    Route::post('importExcel', 'Admin\User_CT@importExcel');
 });
 

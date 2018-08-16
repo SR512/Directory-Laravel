@@ -117,6 +117,38 @@
             {!! Form::close() !!}
         </div>
 
+        <div class="panel panel-primary">
+            <div class="panel-heading">Upload Excel File</div>
+            <div class="panel-body">
+
+
+                <form action="{{ URL::to('importExcel') }}" method="post" class="form-material" enctype="multipart/form-data">
+
+                {{ csrf_field() }}
+
+                <div class="form-group">
+
+                    <div class="col-md-12{{ $errors->has('excel') ? ' has-error' : '' }}">
+                        <input type="file" class="form-control" name="import_file">
+                        @if ($errors->has('excel'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('excel') }}</strong>
+                                    </span>
+                        @endif
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="submit">Upload Excel</button>
+
+            </div>
+
+            </form>
+        </div>
+
+
         <div class="white-box">
             <table class="table table-striped" id="table">
                 <thead>
